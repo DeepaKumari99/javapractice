@@ -4,21 +4,26 @@ class BankAccount {
     String holderName;
     double balance;
 
+    
     BankAccount() {
         this.accountNumber = 0;
         this.holderName = "No Name";
         this.balance = 0;
+    }
 
+    
     BankAccount(int accountNumber, String holderName, double balance) {
         this.accountNumber = accountNumber;
         this.holderName = holderName;
         this.balance = balance;
     }
 
+    
     void deposit(int amount) {
         balance = balance + amount;
     }
 
+    
     void withdraw(int amount) {
         if (amount <= balance) {
             balance = balance - amount;
@@ -27,6 +32,7 @@ class BankAccount {
         }
     }
 
+    
     void show() {
         System.out.println("Account No : " + accountNumber);
         System.out.println("Name       : " + holderName);
